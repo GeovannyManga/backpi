@@ -19,10 +19,12 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+require("dotenv").config();
+const { PGPORT } = process.env;
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(8044, () => {
+  server.listen(PGPORT||"https://backpi-production-a4f9.up.railway.app/", () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
