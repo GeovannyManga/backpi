@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const sequelize = new Sequelize(
-  `postgresql://postgres:bJ5gY5waX5XGY3AvoNob@containers-us-west-184.railway.app:https://backpi-production-a4f9.up.railway.app//railway`,
+  `postgresql://postgres:bJ5gY5waX5XGY3AvoNob@containers-us-west-184.railway.app:8044/railway`,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed

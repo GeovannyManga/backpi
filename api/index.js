@@ -22,7 +22,7 @@ const { conn } = require('./src/db.js');
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(8044 || "https://backpi-production-a4f9.up.railway.app/", () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
